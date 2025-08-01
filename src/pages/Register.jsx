@@ -30,6 +30,10 @@ const Register = () => {
       setError("Debes completar con el nombre de usuario");
       return
     }
+    if (username.length <= 3) {
+      setError("El nombre debe tener al menos 3 caracteres")
+      return
+    }
     if (!email) {
       setError("Debes completar con un email valido")
       return
@@ -93,7 +97,6 @@ const Register = () => {
           </div>
           <button>Ingresar</button>
         </form>
-
         {
           error && <p style={{ color: "red" }}>{error}</p>
         }
