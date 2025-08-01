@@ -28,8 +28,36 @@ const UserProvider = (props) => {
     setUser(null)
   }
 
+
+  const register = async (username, password, email) => {
+
+    //realizar una peticion al back 
+    const response = await fetch("https://fakestoreapi.com/users", {
+
+      method: "POST",
+      headers: { //informacion extra 
+        "Content-Type": "application/json"
+
+      },
+      body: JSON.stringify({ username, password, email }) //cuerpo del mensaje
+      //se lo pasamos en un formato valido por eso lo transformamos
+    })
+
+    if (response.ok) {
+
+      //recibe la data la informacion del usuario creado, si es que se valido
+      const data = await response.json()
+      console.log(data);
+      setUser(true)
+      return data
+    } else {
+      return false
+    }
+
+  }
+
   return (
-    <UserContext.Provider value={{ login, logout, user }}>
+    <UserContext.Provider value={{ login, logout, register, user }}>
       {props.children}
     </UserContext.Provider>
   )

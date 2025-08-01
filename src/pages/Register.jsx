@@ -1,21 +1,46 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
+import { useAuth } from "../context/UserContext"
 
 const Register = () => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const { register } = useAuth();
+
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
 
-    if (!username || !email || !password) {
+    //validaciones, una vez pasada crea el usuario en la api
+    if (!username && !email && !password) {
       setError("Debes completar todos los campos")
       return
+    }
+    if (!username) {
+      setError("Debes completar con el nombre de usuario");
+      return
+    }
+    if (!email) {
+      setEmail("Debes completar con un email valido")
+      return
+    }
+    if (!password) {
+      setError("Debes completar la contraseña con una valida")
+      return
+    }
+
+
+    //conectar el registro con la base de datos
+    const isRegister = await register(username, password, email)
+    console.log(isRegister)
+
+    if (isRegister) {
+      setSuccess("Usuario registrado con éxito")
     }
 
     const newUser = {
@@ -24,9 +49,9 @@ const Register = () => {
       password
     }
 
-    console.log(newUser)
-    setSuccess("Usuario registrado con éxito")
-
+    //reset de formulario
+    setSuccess("")
+    setError("")
     setUsername("")
     setEmail("")
     setPassword("")
