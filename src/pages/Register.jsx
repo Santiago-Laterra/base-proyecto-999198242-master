@@ -26,7 +26,7 @@ const Register = () => {
       return
     }
     if (!email) {
-      setEmail("Debes completar con un email valido")
+      setError("Debes completar con un email valido")
       return
     }
     if (!password) {
@@ -51,11 +51,6 @@ const Register = () => {
       setTimeout(() => {
         setSuccess("")
       }, 3000)
-    }
-    const newUser = {
-      username,
-      email,
-      password
     }
   }
 
