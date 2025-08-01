@@ -1,17 +1,22 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
+import { useNavigate } from "react-router-dom"
+
 
 const Register = () => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const { register } = useAuth();
-
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
 
+  const navigate = useNavigate()
+
+
   const handleSubmit = async (e) => {
+
     e.preventDefault()
     setError("")
     setSuccess("")
@@ -50,7 +55,8 @@ const Register = () => {
       //despues de 3 s se borra el mensaje de exito.
       setTimeout(() => {
         setSuccess("")
-      }, 3000)
+        navigate("/")
+      }, 1500)
     }
   }
 
