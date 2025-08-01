@@ -41,20 +41,22 @@ const Register = () => {
 
     if (isRegister) {
       setSuccess("Usuario registrado con éxito")
-    }
 
+      //reset de formulario
+      setUsername("")
+      setEmail("")
+      setPassword("")
+
+      //despues de 3 s se borra el mensaje de exito.
+      setTimeout(() => {
+        setSuccess("")
+      }, 3000)
+    }
     const newUser = {
       username,
       email,
       password
     }
-
-    //reset de formulario
-    setSuccess("")
-    setError("")
-    setUsername("")
-    setEmail("")
-    setPassword("")
   }
 
   return (
