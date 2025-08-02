@@ -3,6 +3,8 @@ import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
 
 const Home = () => {
+
+
   const [products, setProducts] = useState([])
   const [showPopup, setShowPopup] = useState(null)
   const [productToEdit, setProductToEdit] = useState(null)
@@ -12,6 +14,7 @@ const Home = () => {
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
   const [searchWord, setSearchword] = useState("")
+
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
@@ -119,7 +122,19 @@ const Home = () => {
         {/* div para filtrar busqueda por palabra del usuario */}
         <div>
           {
-
+            //validacion para que no me muestre nada
+            searchWord.trim() === ""
+              ? null                                                   //uso includes para hacer la busqueda parcial
+              : products.filter((producto) => producto.title.toLowerCase().includes(searchWord.toLowerCase())).map(product => (
+                //muestro en la UI
+                <div key={product.id}>
+                  <h2 key={product.id}>{product.title}</h2>
+                  <img width="50px" src={product.image} alt={`Imagen de ${product.title}`} />
+                  <p>${product.price}</p>
+                  <p>{product.description}</p>
+                  <p><strong>{product.category}</strong></p>
+                </div>
+              ))
           }
         </div>
 
