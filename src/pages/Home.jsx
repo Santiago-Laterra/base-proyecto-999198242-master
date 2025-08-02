@@ -11,6 +11,7 @@ const Home = () => {
   const [descriptionEdit, setDescriptionEdit] = useState("")
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
+  const [searchWord, setSearchword] = useState("")
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
@@ -111,11 +112,20 @@ const Home = () => {
       <section>
         <h2>Nuestros productos</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
+        <input type="text"
+          value={searchWord}
+          onChange={(e) => setSearchword(e.target.value)}
+        />
+        {/* div para filtrar busqueda por palabra del usuario */}
+        <div>
+          {
 
+          }
+        </div>
 
         {
           showPopup && <section className="popup-edit">
-            <h2>Editando producto.</h2>
+            <h2>Editando el producto.</h2>
             <button onClick={() => setShowPopup(null)}>Cerrar</button>
             <form onSubmit={handleUpdate}>
               <input
@@ -147,26 +157,28 @@ const Home = () => {
                 value={imageEdit}
                 onChange={(e) => setImageEdit(e.target.value)}
               />
-              <button>Actualizar</button>
+              <button>Guardar Cambios</button>
             </form>
           </section>
         }
 
         <div>
           {
-            products.map((product) => <div key={product.id}>
-              <h2 key={product.id}>{product.title}</h2>
-              <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-              <p>${product.price}</p>
-              <p>{product.description}</p>
-              <p><strong>{product.category}</strong></p>
-              {
-                user && <div>
-                  <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
-                  <button onClick={() => handleDelete(product.id)}>Borrar</button>
-                </div>
-              }
-            </div>)
+            products.map((product) =>
+              <div key={product.id}>
+                <h2 key={product.id}>{product.title}</h2>
+                <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
+                <p>${product.price}</p>
+                <p>{product.description}</p>
+                <p><strong>{product.category}</strong></p>
+                {
+                  user && <div>
+                    <button onClick={() => handleOpenEdit(product)}>Editar</button>
+                    <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                  </div>
+                }
+              </div>
+            )
           }
         </div>
       </section>
