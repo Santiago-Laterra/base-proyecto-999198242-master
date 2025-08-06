@@ -4,9 +4,8 @@ import { Dashboard } from "../pages/Dashboard"
 import { Login } from "../pages/Login"
 import { Register } from "../pages/Register"
 import { NotFound } from "../pages/NotFound"
-import { Nosotros } from "../pages/Nosotros"
 import { PrivateRoute } from "../components/PrivateRoute"
-
+import { Nosotros } from "../pages/Nosotros"
 const RouterApp = () => {
   return (
     <BrowserRouter>

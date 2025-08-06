@@ -24,7 +24,7 @@ const Header = () => {
           {
             !user && <>
               <li><Link to="/">Inicio</Link></li>
-              <li><Link to="nosotros">Nosotros</Link></li>
+              <li><Link to="/nosotros">Nosotros</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/registrate">Registrate</Link></li>
 
