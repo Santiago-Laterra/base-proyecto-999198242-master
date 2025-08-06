@@ -9,7 +9,7 @@ const Nosotros = () => {
         </h1>
         <section className="space-y-8">
           <div className="bg-white shadow-md/30 p-6 rounded-xl">
-            <h2>
+            <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿De qué trata el proyecto?
             </h2>
             <p>
@@ -18,7 +18,7 @@ const Nosotros = () => {
           </div>
 
           <div className="bg-white shadow-md/30 p-6 rounded-xl">
-            <h2>
+            <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿A quién está dirigido?
             </h2>
             <p>
@@ -27,7 +27,7 @@ const Nosotros = () => {
           </div>
 
           <div className="bg-white shadow-md/30 p-6 rounded-xl">
-            <h2>
+            <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿Qué tecnologías o enfoques se usaron?
             </h2>
             <ul>
