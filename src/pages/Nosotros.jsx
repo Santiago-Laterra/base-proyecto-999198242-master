@@ -7,7 +7,7 @@ const Nosotros = () => {
         <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
           Bienvenidos a Nosotros
         </h1>
-        <section>
+        <section className="space-y-8">
           <div>
             <h2>
               ¿De qué trata el proyecto?
