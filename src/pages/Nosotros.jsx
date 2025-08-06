@@ -8,7 +8,7 @@ const Nosotros = () => {
           Bienvenidos a Nosotros
         </h1>
         <section className="space-y-8">
-          <div className="bg-white shadow-md p-6">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl">
             <h2>
               ¿De qué trata el proyecto?
             </h2>
@@ -17,7 +17,7 @@ const Nosotros = () => {
             </p>
           </div>
 
-          <div className="bg-white shadow-md p-6">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl">
             <h2>
               ¿A quién está dirigido?
             </h2>
@@ -26,7 +26,7 @@ const Nosotros = () => {
             </p>
           </div>
 
-          <div className="bg-white shadow-md p-6">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl">
             <h2>
               ¿Qué tecnologías o enfoques se usaron?
             </h2>
