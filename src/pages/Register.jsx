@@ -31,7 +31,7 @@ const Register = () => {
       return
     }
     if (username.length <= 3) {
-      setError("El nombre debe tener al menos 3 caracteres")
+      setError("El nombre debe tener mas 3 caracteres")
       return
     }
     if (!email) {

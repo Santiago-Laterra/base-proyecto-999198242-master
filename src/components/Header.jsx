@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-amber-800 shadow-md">
-      <div className="flex items-center justify-between px-6 py-4">
+      <div className="flex items-center justify-between px-8 py-4">
         <div>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
@@ -19,20 +19,20 @@ const Header = () => {
           />
         </div>
         <nav>
-          <ul className="flex space-x-6 text-orange-100 text-base items-center">
+          <ul className="flex space-x-15 text-orange-100 text-base items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/nosotros">Nosotros</Link></li>
+            <li><Link to="/" className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full">Inicio</Link></li>
+            <li><Link to="/nosotros" className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full">Nosotros</Link></li>
             {
               user && <>
-                <li><Link to="/dashboard">Dashboard</Link></li>
+                <li><Link to="/dashboard" className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full">Dashboard</Link></li>
                 <button onClick={handleLogout} className="text-center text-red-50 font-semibold py-1 px-2 hover:bg-red-50 hover:text-amber-800 rounded-full border-2 border-neutral-100">Cerrar sesión</button>
               </>
             }
             {
               !user && <>
-                <li><Link to="/login">Login</Link></li>
-                <li><Link to="/registrate" className="bg-lime-700 rounded-full py-1 px-2 hover:bg-lime-800 transition">Registrate</Link></li>
+                <li><Link to="/login" className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full">Login</Link></li>
+                <li><Link to="/registrate" className="bg-lime-700 rounded-full py-1 px-2   hover:bg-lime-800 transition font-bold">Registrate</Link></li>
               </>
             }
           </ul>
