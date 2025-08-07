@@ -11,7 +11,7 @@ const Header = () => {
   return (
 
 
-    <header className="bg-[#e19f41] shadow-md">
+    <header className="bg-amber-800 shadow-md">
       <div className="flex items-center justify-between px-6 py-4">
         <div>
           <img
@@ -21,7 +21,7 @@ const Header = () => {
           />
         </div>
         <nav>
-          <ul>
+          <ul className="flex space-x-6 text-red-50 text-lg items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
