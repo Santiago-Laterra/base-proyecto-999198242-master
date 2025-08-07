@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
 import { useNavigate } from "react-router-dom"
-
+import { Link } from "react-router-dom"
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -108,6 +108,8 @@ const Register = () => {
             }
             <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Crear Cuenta</button>
           </form>
+          <hr className="mt-10 mb-10" />
+          <p className="text-[#6b7280] text-center font-semibold">¿Ya ténes una cuenta? <span className="text-sky-600"><Link to="/login" className="hover:underline">Iniciar sesión</Link></span></p>
         </div>
       </div>
     </Layout>
