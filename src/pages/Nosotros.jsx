@@ -8,7 +8,7 @@ const Nosotros = () => {
           Bienvenidos a Nosotros
         </h1>
         <section className="space-y-8">
-          <div className="bg-white shadow-md/30 p-6 rounded-xl">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl transition-transform duration-600 hover:scale-105">
             <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿De qué trata el proyecto?
             </h2>
@@ -17,7 +17,7 @@ const Nosotros = () => {
             </p>
           </div>
 
-          <div className="bg-white shadow-md/30 p-6 rounded-xl">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl transition-transform duration-600 hover:scale-105">
             <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿A quién está dirigido?
             </h2>
@@ -26,7 +26,7 @@ const Nosotros = () => {
             </p>
           </div>
 
-          <div className="bg-white shadow-md/30 p-6 rounded-xl">
+          <div className="bg-white shadow-md/30 p-6 rounded-xl transition-transform duration-600 hover:scale-105">
             <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿Qué tecnologías o enfoques se usaron?
             </h2>
