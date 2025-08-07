@@ -66,44 +66,48 @@ const Register = () => {
 
   return (
     <Layout>
-      <h1>Registrate</h1>
 
-      <section>
-        <h2>Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Username:</label>
-            <input
-              type="text"
-              onChange={(e) => setUsername(e.target.value)}
-              value={username}
-            />
-          </div>
-          <div>
-            <label>Correo electrónico:</label>
-            <input
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-          </div>
-          <div>
-            <label>Contraseña:</label>
-            <input
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
-          </div>
-          <button>Ingresar</button>
-        </form>
-        {
-          error && <p style={{ color: "red" }}>{error}</p>
-        }
-        {
-          success && <p style={{ color: "green" }}>{success}</p>
-        }
-      </section>
+      <div className="flex items-center justify-center py-10 px-4 min-h-[80vh] bg-white">
+        <div className="w-full max-w-md bg-amber-100 p-8 rounded-xl shadow-md">
+          <h1 className="text-center font-bold text-amber-800 mb-1 text-3xl">Registrate</h1>
+          <h2 className="text-center font-medium text-amber-500 mb-6">
+            Creá tu cuenta para acceder a todas las funcionalidades</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Username:</label>
+              <input
+                type="text"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username}
+              />
+            </div>
+            <div>
+              <label>Correo electrónico:</label>
+              <input
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+            </div>
+            <div>
+              <label>Contraseña:</label>
+              <input
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+            </div>
+            {
+              error && <p style={{ color: "red" }}>{error}</p>
+            }
+            {
+              success && <p style={{ color: "green" }}>{success}</p>
+            }
+            <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition">Crear Cuenta</button>
+          </form>
+
+        </div>
+      </div>
     </Layout>
   )
 }
