@@ -2,8 +2,9 @@ const Footer = () => {
   return (
     <footer className="bg-amber-900 text-orange-100 py-6 mt-10">
       <div className="flex flex-col flex-row justify-between items-center px-6">
-        <div> Desarrollado por&nbsp;
-          <a href="#">@Santiago Laterra</a>
+        <div className="text-center text-sm"> Desarrollado por&nbsp;
+          <a href="https://www.linkedin.com/in/santiago-laterra-003511323/" className="hover:text-orange-200 transition"
+            target="_blank">@Santiago Laterra</a>
         </div>
 
         <div className="space-x-4">
