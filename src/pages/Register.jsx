@@ -101,10 +101,10 @@ const Register = () => {
               />
             </div>
             {
-              error && <p style={{ color: "red" }}>{error}</p>
+              error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
             }
             {
-              success && <p style={{ color: "green" }}>{success}</p>
+              success && <p className="text-lime-600 text-center font-bold">{success}</p>
             }
             <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Crear Cuenta</button>
           </form>
