@@ -8,10 +8,13 @@ const Footer = () => {
             target="_blank">@Santiago Laterra</a>
         </div>
         {/* centro */}
-        <div className="space-x-4">
-          <a href="#">Github</a>
-          <a href="#">Terminos y Condiciones</a>
-          <a href="#">Privacidad</a>
+        <div className="flex space-x-4 text-base">
+          <a href="https://github.com/Santiago-Laterra"
+            className="hover:undereline hover:text-orange-400 transition">Github</a>
+          <a href="#"
+            className="hover:undereline hover:text-orange-400 transition">Terminos</a>
+          <a href="#"
+            className="hover:undereline hover:text-orange-400 transition">Privacidad</a>
         </div>
         {/* Derecha */}
         <div>
