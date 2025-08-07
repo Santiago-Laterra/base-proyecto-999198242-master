@@ -12,11 +12,12 @@ const Header = () => {
 
 
     <header className="bg-[#e19f41] shadow-md">
-      <div>
+      <div className="flex items-center justify-between px-6 py-4">
         <div>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
             alt="imagen de logo"
+            className="h-12 w-auto"
           />
         </div>
         <nav>
