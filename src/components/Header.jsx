@@ -34,7 +34,7 @@ const Header = () => {
             {
               !user && <>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/registrate" className="bg-lime-700 rounded py-1 px-2 hover:bg-lime-800 transition">Registrate</Link></li>
+                <li><Link to="/registrate" className="bg-lime-700 rounded-full py-1 px-2 hover:bg-lime-800 transition">Registrate</Link></li>
               </>
             }
           </ul>
