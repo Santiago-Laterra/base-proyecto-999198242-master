@@ -17,11 +17,11 @@ const Header = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
             alt="imagen de logo"
-            className="h-11 w-auto"
+            className="h-12 w-auto"
           />
         </div>
         <nav>
-          <ul className="flex space-x-6 text-orange-100 text-lg items-center">
+          <ul className="flex space-x-6 text-orange-100 text-base items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
