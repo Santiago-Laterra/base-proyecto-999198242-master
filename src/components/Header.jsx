@@ -26,7 +26,7 @@ const Header = () => {
             {
               user && <>
                 <li><Link to="/dashboard">Dashboard</Link></li>
-                <button onClick={handleLogout}>Cerrar sesión</button>
+                <button onClick={handleLogout} className="text-center text-red-50 font-semibold py-1 px-2 hover:bg-red-50 hover:text-amber-800 rounded-full border-2 border-neutral-100">Cerrar sesión</button>
               </>
             }
             {
