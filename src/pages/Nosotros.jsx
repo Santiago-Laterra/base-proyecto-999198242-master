@@ -30,7 +30,7 @@ const Nosotros = () => {
             <h2 className="text-2xl text-center font-semibold text-gray-700 mb-2">
               ¿Qué tecnologías o enfoques se usaron?
             </h2>
-            <ul>
+            <ul className="text-gray-600 leading-relaxed list-disc pl-5 space-y-2">
               <li>
                 <strong>Frontend:</strong> La aplicación fue desarrollada con React, utilizando React Router para la navegación entre rutas.
               </li>
@@ -46,8 +46,8 @@ const Nosotros = () => {
             </ul>
           </div>
         </section>
-      </div>
-    </Layout>
+      </div >
+    </Layout >
   );
 };
 
