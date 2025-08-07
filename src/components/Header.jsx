@@ -17,11 +17,11 @@ const Header = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
             alt="imagen de logo"
-            className="h-12 w-auto"
+            className="h-11 w-auto"
           />
         </div>
         <nav>
-          <ul className="flex space-x-6 text-red-50 text-lg items-center">
+          <ul className="flex space-x-6 text-orange-100 text-lg items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
@@ -34,7 +34,7 @@ const Header = () => {
             {
               !user && <>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/registrate">Registrate</Link></li>
+                <li><Link to="/registrate" className="bg-lime-700 rounded py-1 px-2 hover:bg-lime-800 transition">Registrate</Link></li>
               </>
             }
           </ul>
