@@ -67,7 +67,7 @@ const Register = () => {
   return (
     <Layout>
 
-      <div className="flex items-center justify-center py-10 px-4 min-h-[80vh] bg-white">
+      <div className="flex items-center justify-center py-10 px-4 min-h-[80vh]">
         <div className="w-full max-w-md bg-amber-100 p-8 rounded-xl shadow-md">
           <h1 className="text-center font-bold text-amber-800 mb-1 text-3xl">Registrate</h1>
           <h2 className="text-center font-medium text-amber-500 mb-6">
@@ -79,6 +79,7 @@ const Register = () => {
                 type="text"
                 onChange={(e) => setUsername(e.target.value)}
                 value={username}
+                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
               />
             </div>
             <div>
@@ -87,6 +88,7 @@ const Register = () => {
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
+                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
               />
             </div>
             <div>
@@ -95,6 +97,7 @@ const Register = () => {
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
               />
             </div>
             {
@@ -103,9 +106,8 @@ const Register = () => {
             {
               success && <p style={{ color: "green" }}>{success}</p>
             }
-            <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition">Crear Cuenta</button>
+            <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Crear Cuenta</button>
           </form>
-
         </div>
       </div>
     </Layout>
