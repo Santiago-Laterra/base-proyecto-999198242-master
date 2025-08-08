@@ -61,11 +61,11 @@ const Login = () => {
           <h2 className="text-center font-medium text-amber-500 mb-6">
             Bienvenido a nuestra tienda</h2>
           <section>
-            <div className="mb-6">
-              <div>
-                <p className="font-bold">Credenciales de prueba:</p>
-                <p><span className="font-bold">Usuario:</span>johnd</p>
-                <p><span className="font-bold">Contraseña:</span>m38rmF$</p>
+            <div className="mb-6 bg-amber-50 border border-amber-900 rounded-lg p-4 shadow-sm">
+              <p className="font-bold text-amber-700 mb-2">Credenciales de prueba:</p>
+              <div className="space-y-1 text-sm">
+                <p><span className="font-semibold">Usuario:</span> johnd</p>
+                <p><span className="font-semibold">Contraseña:</span> m38rmF$</p>
               </div>
             </div>
             <form onSubmit={handleLogin}>
@@ -79,7 +79,7 @@ const Login = () => {
                     className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
                 </div>
                 <div>
-                  <label >Contraseña:</label>
+                  <label>Contraseña:</label>
                   <input
                     type="password"
                     onChange={(e) => setPassword(e.target.value)}
