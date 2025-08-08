@@ -3,7 +3,7 @@ import { useAuth } from "../context/UserContext"
 
 const Header = () => {
   const { user, logout } = useAuth()
-
+  const [menuOpen, setMenuOpen] = useState(false);
   const handleLogout = () => {
     logout()
   }
@@ -14,10 +14,15 @@ const Header = () => {
         <div>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
-            alt="imagen de logo"
-            className="h-12 w-auto"
+            alt="logo"
+            className="h-12"
           />
         </div>
+        {/* Botón hamburguesa*/}
+        <button className="md:hidden text-white focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}>☰
+        </button>
+
         <nav>
           <ul className="flex space-x-15 text-orange-100 text-base items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
