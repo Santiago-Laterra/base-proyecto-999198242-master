@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -53,11 +54,13 @@ const Login = () => {
 
   return (
     <Layout>
-      <div>
-        <div>
-          <h1>Inicia sesión</h1>
+      <div className="flex items-center justify-center py-10 px-4 min-h-[80vh]">
+        <div className="w-full max-w-md bg-amber-100 p-8 rounded-xl shadow-md">
+          <h1 className="text-center font-bold text-amber-800 mb-1 text-3xl">
+            Inicia sesión</h1>
+          <h2 className="text-center font-medium text-amber-500 mb-6">
+            Bienvenido a nuestra tienda</h2>
           <section>
-            <h2>Bienvenido a nuestra tienda</h2>
             <p>Credenciales de prueba:</p>
             <p>Usuario:johnd</p>
             <p>Contraseña:m38rmF$</p>
@@ -70,7 +73,7 @@ const Login = () => {
                   value={username} />
               </div>
               <div>
-                <label>Contraseña:</label>
+                <label >Contraseña:</label>
                 <input
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
