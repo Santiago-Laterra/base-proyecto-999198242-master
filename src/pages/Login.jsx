@@ -19,26 +19,30 @@ const Login = () => {
     //validaciones
 
     if (!username && !password) {
+      setError("Debes completar todos los campos")
       setTimeout(() => {
-        setError("Debes completar todos los campos")
+        setError("")
       }, 1500)
       return
     }
     if (!username) {
+      setError("Debes completar el nombre")
       setTimeout(() => {
-        setError("Debes completar el nombre")
+        setError("")
       }, 1500)
       return
     }
     if (username.length <= 3) {
+      setError("El nombre debe tener al menos 3 caracteres")
       setTimeout(() => {
-        setError("El nombre debe tener al menos 3 caracteres")
+        setError("")
       }, 1500)
       return
     }
     if (!password) {
+      setError("Debes completar el password")
       setTimeout(() => {
-        setError("Debes completar el password")
+        setError("")
       }, 1500)
       return
     }
@@ -61,8 +65,9 @@ const Login = () => {
     } else {
       setUsername("")
       setPassword("")
+      setError("Usuario o contraseña incorrecto")
       setTimeout(() => {
-        setError("Usuario o contraseña incorrecto")
+        setError("")
       }, 1500)
     }
   }
