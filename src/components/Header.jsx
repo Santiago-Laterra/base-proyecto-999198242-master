@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
-
+import { useState } from "react"
 const Header = () => {
   const { user, logout } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,16 +14,16 @@ const Header = () => {
         <div>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
-            alt="logo"
-            className="h-12"
+            alt="imagen de logo"
+            className="h-12 "
           />
         </div>
         {/* Botón hamburguesa*/}
         <button className="md:hidden text-white focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}>☰
-        </button>
+          onClick={() => setMenuOpen(!menuOpen)}> ☰ </button>
 
-        <nav>
+        {/* menu pantalla de escritorio */}
+        <nav className="hidden md:block">
           <ul className="flex space-x-15 text-orange-100 text-base items-center">
             {/* Cambiar elementos a por componentes Link de react-router-dom */}
             <li><Link to="/" className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full">Inicio</Link></li>
