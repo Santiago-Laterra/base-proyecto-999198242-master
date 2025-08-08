@@ -61,37 +61,43 @@ const Login = () => {
           <h2 className="text-center font-medium text-amber-500 mb-6">
             Bienvenido a nuestra tienda</h2>
           <section>
-            <p className="font-bold">Credenciales de prueba:</p>
-            <p><span className="font-bold">Usuario:</span>johnd</p>
-            <p><span className="font-bold">Contraseña:</span>m38rmF$</p>
-            <form onSubmit={handleLogin}>
+            <div className="space-y-6">
               <div>
-                <label>Nombre de usuario:</label>
-                <input
-                  type="text"
-                  onChange={(e) => setUsername(e.target.value)}
-                  value={username}
-                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+                <p className="font-bold">Credenciales de prueba:</p>
+                <p><span className="font-bold">Usuario:</span>johnd</p>
+                <p><span className="font-bold">Contraseña:</span>m38rmF$</p>
               </div>
-              <div>
-                <label >Contraseña:</label>
-                <input
-                  type="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
-              </div>
-              {
-                error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
-              }
-              <button>Ingresar</button>
-            </form>
+              <form onSubmit={handleLogin}>
+                <div className="space-y-6">
+                  <div>
+                    <label>Nombre de usuario:</label>
+                    <input
+                      type="text"
+                      onChange={(e) => setUsername(e.target.value)}
+                      value={username}
+                      className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+                  </div>
+                  <div>
+                    <label >Contraseña:</label>
+                    <input
+                      type="password"
+                      onChange={(e) => setPassword(e.target.value)}
+                      value={password}
+                      className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+                  </div>
+                </div>
+                {
+                  error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
+                }
+                <button className="py-2 px-4 mt-8 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Ingresar</button>
+              </form>
+            </div>
           </section>
           <hr className="mt-10 mb-10" />
           <p className="text-[#6b7280] text-center font-semibold">¿No tienes una cuenta? <span className="text-sky-600"><Link to="/registrate" className="hover:underline">Registrate</Link></span></p>
         </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }
 

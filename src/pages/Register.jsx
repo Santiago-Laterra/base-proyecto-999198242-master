@@ -72,33 +72,35 @@ const Register = () => {
           <h1 className="text-center font-bold text-amber-800 mb-1 text-3xl">Registrate</h1>
           <h2 className="text-center font-medium text-amber-500 mb-6">
             Creá tu cuenta para acceder a todas las funcionalidades</h2>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label>Username:</label>
-              <input
-                type="text"
-                onChange={(e) => setUsername(e.target.value)}
-                value={username}
-                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
-              />
-            </div>
-            <div>
-              <label>Correo electrónico:</label>
-              <input
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
-              />
-            </div>
-            <div>
-              <label>Contraseña:</label>
-              <input
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-                className="w-full px-4 py-2 border border-orange-900 rounded-lg"
-              />
+          <form onSubmit={handleSubmit} >
+            <div className="space-y-6">
+              <div>
+                <label>Username:</label>
+                <input
+                  type="text"
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={username}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg"
+                />
+              </div>
+              <div>
+                <label>Correo electrónico:</label>
+                <input
+                  type="email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg"
+                />
+              </div>
+              <div>
+                <label>Contraseña:</label>
+                <input
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg"
+                />
+              </div>
             </div>
             {
               error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
@@ -106,9 +108,9 @@ const Register = () => {
             {
               success && <p className="text-lime-600 text-center font-bold">{success}</p>
             }
-            <button className="py-2 px-4 mt-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Crear Cuenta</button>
+            <button className="py-2 px-4 mt-8 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Crear Cuenta</button>
           </form>
-          <hr className="mt-10 mb-10" />
+          <hr className="mt-8 mb-8" />
           <p className="text-[#6b7280] text-center font-semibold">¿Ya ténes una cuenta? <span className="text-sky-600"><Link to="/login" className="hover:underline">Iniciar sesión</Link></span></p>
         </div>
       </div>
