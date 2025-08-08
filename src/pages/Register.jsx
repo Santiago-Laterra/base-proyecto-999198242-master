@@ -23,23 +23,35 @@ const Register = () => {
 
     //validaciones, una vez pasada crea el usuario en la api
     if (!username && !email && !password) {
-      setError("Debes completar todos los campos")
+      setTimeout(() => {
+        setError("Debes completar todos los campos")
+      }, 1500)
+
       return
     }
     if (!username) {
-      setError("Debes completar con el nombre de usuario");
+      setTimeout(() => {
+        setError("Debes completar con el nombre de usuario");
+      }, 1500)
       return
     }
     if (username.length <= 3) {
-      setError("El nombre debe tener mas 3 caracteres")
+      setTimeout(() => {
+        setError("El nombre debe tener mas 3 caracteres")
+      }, 1500)
+
       return
     }
     if (!email) {
-      setError("Debes completar con un email valido")
+      setTimeout(() => {
+        setError("Debes completar con un email valido")
+      }, 1500)
       return
     }
     if (!password) {
-      setError("Debes completar la contraseña con una valida")
+      setTimeout(() => {
+        setError("Debes completar la contraseña con una valida")
+      }, 1500)
       return
     }
 
