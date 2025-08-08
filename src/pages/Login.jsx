@@ -61,23 +61,25 @@ const Login = () => {
           <h2 className="text-center font-medium text-amber-500 mb-6">
             Bienvenido a nuestra tienda</h2>
           <section>
-            <p>Credenciales de prueba:</p>
-            <p>Usuario:johnd</p>
-            <p>Contraseña:m38rmF$</p>
+            <p className="font-bold">Credenciales de prueba:</p>
+            <p><span className="font-bold">Usuario:</span>johnd</p>
+            <p><span className="font-bold">Contraseña:</span>m38rmF$</p>
             <form onSubmit={handleLogin}>
               <div>
                 <label>Nombre de usuario:</label>
                 <input
                   type="text"
                   onChange={(e) => setUsername(e.target.value)}
-                  value={username} />
+                  value={username}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
               <div>
                 <label >Contraseña:</label>
                 <input
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
-                  value={password} />
+                  value={password}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
               {
                 error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
