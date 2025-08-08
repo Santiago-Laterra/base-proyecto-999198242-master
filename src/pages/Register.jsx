@@ -111,8 +111,6 @@ const Register = () => {
           <hr className="mt-10 mb-10" />
           <p className="text-[#6b7280] text-center font-semibold">¿Ya ténes una cuenta? <span className="text-sky-600"><Link to="/login" className="hover:underline">Iniciar sesión</Link></span></p>
         </div>
-        <hr className="mt-10 mb-10" />
-        <p className="text-[#6b7280] text-center font-semibold">¿Ya ténes una cuenta? <span className="text-sky-600"><Link to="/login" className="hover:underline">Iniciar sesión</Link></span></p>
       </div>
     </Layout>
   )
