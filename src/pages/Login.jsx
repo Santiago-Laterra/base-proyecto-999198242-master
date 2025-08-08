@@ -83,7 +83,7 @@ const Login = () => {
             </form>
           </section>
           <hr className="mt-10 mb-10" />
-          <p className="text-[#6b7280] text-center font-semibold">¿Ya ténes una cuenta? <span className="text-sky-600"><Link to="/login" className="hover:underline">Iniciar sesión</Link></span></p>
+          <p className="text-[#6b7280] text-center font-semibold">¿No tienes una cuenta? <span className="text-sky-600"><Link to="/registrate" className="hover:underline">Registrate</Link></span></p>
         </div>
       </div>
     </Layout>
