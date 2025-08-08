@@ -8,6 +8,7 @@ const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
+  const [success, setSuccess] = useState("")
   const { login } = useAuth()
 
   const navigate = useNavigate()
@@ -18,19 +19,27 @@ const Login = () => {
     //validaciones
 
     if (!username && !password) {
-      setError("Debes completar todos los campos")
+      setTimeout(() => {
+        setError("Debes completar todos los campos")
+      }, 1500)
       return
     }
     if (!username) {
-      setError("Debes completar el nombre")
+      setTimeout(() => {
+        setError("Debes completar el nombre")
+      }, 1500)
       return
     }
     if (username.length <= 3) {
-      setError("El nombre debe tener al menos 3 caracteres")
+      setTimeout(() => {
+        setError("El nombre debe tener al menos 3 caracteres")
+      }, 1500)
       return
     }
     if (!password) {
-      setError("Debes completar el password")
+      setTimeout(() => {
+        setError("Debes completar el password")
+      }, 1500)
       return
     }
 
@@ -38,17 +47,23 @@ const Login = () => {
     const isLogin = await login(username, password)
 
     if (isLogin) {
+      setSuccess("Usuario logueado correctamente")
 
       //reset el formulario
       setUsername("")
       setPassword("")
+
       //redirecciono
-      navigate("/")
+      setTimeout(() => {
+        setSuccess("")
+        navigate("/")
+      }, 1500)
     } else {
       setUsername("")
       setPassword("")
-      setError("Usuario o contraseña incorrecto")
-
+      setTimeout(() => {
+        setError("Usuario o contraseña incorrecto")
+      }, 1500)
     }
   }
 
@@ -89,6 +104,9 @@ const Login = () => {
               </div>
               {
                 error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
+              }
+              {
+                success && <p className="text-lime-600 text-center font-bold mt-2">{success}</p>
               }
               <button className="py-2 px-4 mt-6 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Ingresar</button>
             </form>
