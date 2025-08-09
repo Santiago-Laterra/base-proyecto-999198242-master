@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
 import { useState } from "react"
+
 const Header = () => {
   const { user, logout } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,11 +13,7 @@ const Header = () => {
     <header className="bg-amber-800 shadow-md">
       <div className="flex items-center justify-between px-8 py-4">
         <div>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png"
-            alt="imagen de logo"
-            className="h-12"
-          />
+          <span style={{ fontFamily: "'Bestlight', sans-serif" }} className="text-2xl text-green-100 font-extrabold">Alta Pinta</span>
         </div>
         {/* Botón hamburguesa*/}
         <button className="md:hidden text-white focus:outline-none"
