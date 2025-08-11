@@ -15,10 +15,21 @@ const Dashboard = () => {
     setError(null)
 
     if (!name || !price || !description) {
-      setError("Debes completar todos los campos")
+      setError("Debes completar los campos, nombre, precio y descripcion")
       return
     }
-
+    if (!name) {
+      setError("Debes completar el nombre del producto")
+      return
+    }
+    if (!description) {
+      setError("Debes completar la descripcion del producto")
+      return
+    }
+    if (!price) {
+      setError("Debes completar el precio del producto")
+      return
+    }
     if (name.length < 3) {
       setError("El nombre debe tener al menos 4 caracteres")
       return
@@ -85,21 +96,11 @@ const Dashboard = () => {
                   value={description}
                   className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
-
               {
                 error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
               }
-
               <button className="py-2 px-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Guardar producto</button>
             </form>
-
-            {
-              product && <div>
-                <h3>{product.title}</h3>
-                <p>${product.price}</p>
-                <p>{product.description}</p>
-              </div>
-            }
           </section>
         </div>
       </div>
