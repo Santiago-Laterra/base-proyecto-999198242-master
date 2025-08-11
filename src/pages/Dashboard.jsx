@@ -5,6 +5,7 @@ const Dashboard = () => {
   const [name, setName] = useState("")
   const [price, setPrice] = useState("")
   const [description, setDescription] = useState("")
+  const [img, setImg] = useState("")
   const [product, setProduct] = useState(null)
   const [error, setError] = useState(null)
 
@@ -56,7 +57,7 @@ const Dashboard = () => {
       price: price,
       description: description,
       category: "",
-      image: ""
+      image: img
     }
 
     // petición al backend mediante fetch -> método POST https://fakeproductapi.com/products
@@ -109,6 +110,15 @@ const Dashboard = () => {
                   placeholder="Descripcion:"
                   onChange={(e) => setDescription(e.target.value)}
                   value={description}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+              </div>
+
+              <div>
+                <label>Imagen del producto: (opcional)</label>
+                <input type="text" name="img"
+                  placeholder="EJ:https://imagen.com/img.jpg"
+                  onChange={(e) => setDescription(e.target.value)}
+                  value={img}
                   className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
               {
