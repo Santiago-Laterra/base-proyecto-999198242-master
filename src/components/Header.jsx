@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-amber-800 shadow-md">
+    <header className="fixed top-0 left-0 w-full bg-amber-800 shadow-md z-50">
       <div className="flex items-center justify-between px-8 py-4">
         <div>
           <span style={{ fontFamily: "'Lobster', cursive" }} className="text-3xl text-red-50 font-extrabold">Alta Pinta</span>
