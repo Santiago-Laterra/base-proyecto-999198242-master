@@ -117,7 +117,7 @@ const Dashboard = () => {
                 <label>Imagen del producto: (opcional)</label>
                 <input type="text" name="img"
                   placeholder="EJ:https://imagen.com/img.jpg"
-                  onChange={(e) => setDescription(e.target.value)}
+                  onChange={(e) => setImg(e.target.value)}
                   value={img}
                   className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
