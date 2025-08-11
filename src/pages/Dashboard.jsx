@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { use, useState } from "react"
 import { Layout } from "../components/Layout"
 
 const Dashboard = () => {
@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [img, setImg] = useState("")
   const [product, setProduct] = useState(null)
   const [error, setError] = useState(null)
-
+  const [success, setSuccess] = useState("")
 
 
   const handleSubmit = async (e) => {
@@ -43,13 +43,32 @@ const Dashboard = () => {
       }, 2000)
       return
     }
-    if (name.length < 3) {
-      setError("El nombre debe tener al menos 4 caracteres")
+    if (description.length < 10) {
+      setError("La descripcion debe tener al menos 10 caracteres")
       setTimeout(() => {
         setError("")
       }, 2000)
       return
     }
+
+    setSuccess(true)
+
+
+
+    setSuccess("Producto registrado con éxito")
+
+    //reset de formulario
+    setName("")
+    setDescription("")
+    setImg("")
+    setPrice("")
+
+    //despues de 2 s se borra el mensaje de exito.
+    setTimeout(() => {
+      setSuccess("")
+    }, 2000)
+
+
 
     const newProduct = {
       id: crypto.randomUUID(),
@@ -124,6 +143,9 @@ const Dashboard = () => {
 
               {
                 error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
+              }
+              {
+                success && <p className="text-lime-600 text-center font-bold">{success}</p>
               }
               <button className="py-2 px-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Guardar producto</button>
             </form>
