@@ -16,22 +16,37 @@ const Dashboard = () => {
 
     if (!name || !price || !description) {
       setError("Debes completar los campos, nombre, precio y descripcion")
+      setTimeout(() => {
+        setError("")
+      }, 1500)
       return
     }
     if (!name) {
       setError("Debes completar el nombre del producto")
+      setTimeout(() => {
+        setError("")
+      }, 1500)
       return
     }
     if (!description) {
       setError("Debes completar la descripcion del producto")
+      setTimeout(() => {
+        setError("")
+      }, 1500)
       return
     }
     if (!price) {
       setError("Debes completar el precio del producto")
+      setTimeout(() => {
+        setError("")
+      }, 1500)
       return
     }
     if (name.length < 3) {
       setError("El nombre debe tener al menos 4 caracteres")
+      setTimeout(() => {
+        setError("")
+      }, 1500)
       return
     }
 
