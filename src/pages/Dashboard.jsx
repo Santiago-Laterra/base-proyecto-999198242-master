@@ -14,7 +14,7 @@ const Dashboard = () => {
     e.preventDefault()
     setError(null)
 
-    if (!name || !price || !description) {
+    if (!name && !price && !description) {
       setError("Debes completar los campos, nombre, precio y descripcion")
       setTimeout(() => {
         setError("")
