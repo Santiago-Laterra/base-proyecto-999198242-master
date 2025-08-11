@@ -19,35 +19,35 @@ const Dashboard = () => {
       setError("Debes completar los campos, nombre, precio y descripcion")
       setTimeout(() => {
         setError("")
-      }, 1500)
+      }, 2000)
       return
     }
     if (!name) {
       setError("Debes completar el nombre del producto")
       setTimeout(() => {
         setError("")
-      }, 1500)
+      }, 2000)
       return
     }
     if (!description) {
       setError("Debes completar la descripcion del producto")
       setTimeout(() => {
         setError("")
-      }, 1500)
+      }, 2000)
       return
     }
     if (!price) {
       setError("Debes completar el precio del producto")
       setTimeout(() => {
         setError("")
-      }, 1500)
+      }, 2000)
       return
     }
     if (name.length < 3) {
       setError("El nombre debe tener al menos 4 caracteres")
       setTimeout(() => {
         setError("")
-      }, 1500)
+      }, 2000)
       return
     }
 
@@ -114,13 +114,14 @@ const Dashboard = () => {
               </div>
 
               <div>
-                <label>Imagen del producto: (opcional)</label>
+                <label>Imagen del producto (opcional): </label>
                 <input type="text" name="img"
                   placeholder="EJ:https://imagen.com/img.jpg"
                   onChange={(e) => setImg(e.target.value)}
                   value={img}
                   className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
               </div>
+
               {
                 error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
               }
