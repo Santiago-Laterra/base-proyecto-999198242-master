@@ -12,7 +12,8 @@ const Footer = () => {
         {/* centro */}
         <div className="space-x-4 text-sm">
           <a href="https://github.com/Santiago-Laterra"
-            className="hover:underline hover:text-orange-400 transition">Github</a>
+            className="hover:underline hover:text-orange-400 transition"
+            target="_blank">Github</a>
           <a href="#"
             className="hover:underline hover:text-orange-400 transition">Terminos</a>
           <a href="#"
