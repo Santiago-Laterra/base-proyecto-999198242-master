@@ -72,10 +72,10 @@ const Dashboard = () => {
           </div>
 
           {
-            error && <p className="error">{error}</p>
+            error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
           }
 
-          <button>Guardar producto</button>
+          <button className="py-2 px-4 mt-8 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Guardar producto</button>
         </form>
 
         {
