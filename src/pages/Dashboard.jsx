@@ -51,41 +51,59 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <h1>Panel de Administración</h1>
+      <h1 className="text-4xl text-center font-bold mt-5 text-amber-700">Panel de Administración</h1>
+      <p className="text-orange-300 text-center mt-2">Gestiona tus productos!!</p>
+      <div className="flex items-center justify-center py-10 px-4 min-h-[80vh]">
+        <div className="w-full max-w-md bg-amber-100 p-8 rounded-xl shadow-md">
+          <section>
+            <form onSubmit={handleSubmit}
+              className="space-y-4">
+              <h2 className="text-2xl">Cargar nuevo producto</h2>
+              <div>
+                <label>Nombre del producto:</label>
+                <input type="text" name="nombre"
+                  placeholder="EJ: Manzana"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+              </div>
 
-      <section>
-        <h2>Cargar nuevo producto</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Nombre del producto:</label>
-            <input type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
-          </div>
+              <div>
+                <label>Precio:</label>
+                <input type="number" name="precio"
+                  placeholder="EJ: 100"
+                  onChange={(e) => setPrice(e.target.value)}
+                  value={price}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+              </div>
 
-          <div>
-            <label>Precio:</label>
-            <input type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
-          </div>
+              <div>
+                <label>Descripción:</label>
+                <textarea name="descripcion" rows="4"
+                  placeholder="Descripcion:"
+                  onChange={(e) => setDescription(e.target.value)}
+                  value={description}
+                  className="w-full px-4 py-2 border border-orange-900 rounded-lg" />
+              </div>
 
-          <div>
-            <label>Descripción:</label>
-            <textarea name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
-          </div>
+              {
+                error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
+              }
 
-          {
-            error && <p className="text-red-500 text-center font-bold mt-2">{error}</p>
-          }
+              <button className="py-2 px-4 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Guardar producto</button>
+            </form>
 
-          <button className="py-2 px-4 mt-8 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition text-center w-full">Guardar producto</button>
-        </form>
+            {
+              product && <div>
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+                <p>{product.description}</p>
+              </div>
+            }
+          </section>
+        </div>
+      </div>
 
-        {
-          product && <div>
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
-            <p>{product.description}</p>
-          </div>
-        }
-      </section>
     </Layout>
   )
 }
