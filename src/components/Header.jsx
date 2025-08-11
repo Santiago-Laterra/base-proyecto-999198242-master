@@ -13,7 +13,7 @@ const Header = () => {
     <header className="bg-amber-800 shadow-md">
       <div className="flex items-center justify-between px-8 py-4">
         <div>
-          <span style={{ fontFamily: "'Bestlight', sans-serif" }} className="text-2xl text-green-100 font-extrabold">Alta Pinta</span>
+          <span style={{ fontFamily: "'Lobster', cursive" }} className="text-3xl text-red-50 font-extrabold">Alta Pinta</span>
         </div>
         {/* Botón hamburguesa*/}
         <button className="md:hidden text-white focus:outline-none"
