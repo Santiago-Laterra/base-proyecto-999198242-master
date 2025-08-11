@@ -111,7 +111,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="/registrate"
-                    className="bg-lime-700 rounded-full py-1 px-2 hover:bg-lime-800 k"
+                    className="bg-lime-700 rounded-full py-1 px-2 hover:bg-lime-800 text-red-50 font-bold"
                     onClick={() => setMenuOpen(false)}> Registrate
                   </Link>
                 </li>
