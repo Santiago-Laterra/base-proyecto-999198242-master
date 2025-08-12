@@ -127,13 +127,14 @@ const Home = () => {
               ? null                                                   //uso includes para hacer la busqueda parcial
               : products.filter((producto) => producto.title.toLowerCase().includes(searchWord.toLowerCase())).map(product => (
                 //muestro en la UI
-                <div key={product.id}>
-                  <h2 key={product.id}>{product.title}</h2>
-                  <img width="50px" src={product.image} alt={`Imagen de ${product.title}`} />
-                  <p>${product.price}</p>
-                  <p>{product.description}</p>
-                  <p><strong>{product.category}</strong></p>
-                </div>
+                <div>1</div>
+                // <div key={product.id}>
+                //   <h2 key={product.id}>{product.title}</h2>
+                //   <img width="50px" src={product.image} alt={`Imagen de ${product.title}`} />
+                //   <p>${product.price}</p>
+                //   <p>{product.description}</p>
+                //   <p><strong>{product.category}</strong></p>
+                // </div>
               ))
           }
         </div>
@@ -177,27 +178,29 @@ const Home = () => {
           </section>
         }
 
-        <div>
+        <div className="grid grid-cols-4 gap-4">
           {
             products.map((product) =>
-              <div key={product.id}>
-                <h2 key={product.id}>{product.title}</h2>
-                <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-                <p>${product.price}</p>
-                <p>{product.description}</p>
-                <p><strong>{product.category}</strong></p>
-                {
-                  user && <div>
-                    <button onClick={() => handleOpenEdit(product)}>Editar</button>
-                    <button onClick={() => handleDelete(product.id)}>Borrar</button>
-                  </div>
-                }
+              <div className="flex">
+                <div key={product.id}>
+                  <h2 key={product.id}>{product.title}</h2>
+                  <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
+                  <p>${product.price}</p>
+                  <p>{product.description}</p>
+                  <p><strong>{product.category}</strong></p>
+                  {
+                    user && <div>
+                      <button onClick={() => handleOpenEdit(product)}>Editar</button>
+                      <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                    </div>
+                  }
+                </div>
               </div>
             )
           }
         </div>
       </section>
-    </Layout>
+    </Layout >
   )
 }
 
