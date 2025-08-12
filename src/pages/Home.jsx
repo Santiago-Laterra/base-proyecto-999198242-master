@@ -114,27 +114,37 @@ const Home = () => {
 
       <section>
         <h2>Nuestros productos</h2>
-        <p>Elegí entre nuestras categorías más populares.</p>
-        <input type="text"
-          value={searchWord}
-          onChange={(e) => setSearchword(e.target.value)}
-        />
+        <div className="flex flex-col items-center">
+          <p className="text-center text-2xl mb-4">
+            Elegí entre nuestras categorías más populares.
+          </p>
+          <input
+            type="text"
+            className="px-4 py-2 border border-orange-900 rounded-lg w-80"
+            value={searchWord}
+            onChange={(e) => setSearchword(e.target.value)}
+          />
+        </div>
         {/* div para filtrar busqueda por palabra del usuario */}
-        <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-2">
           {
             //validacion para que no me muestre nada
             searchWord.trim() === ""
               ? null                                                   //uso includes para hacer la busqueda parcial
               : products.filter((producto) => producto.title.toLowerCase().includes(searchWord.toLowerCase())).map(product => (
                 //muestro en la UI
-                <div>1</div>
-                // <div key={product.id}>
-                //   <h2 key={product.id}>{product.title}</h2>
-                //   <img width="50px" src={product.image} alt={`Imagen de ${product.title}`} />
-                //   <p>${product.price}</p>
-                //   <p>{product.description}</p>
-                //   <p><strong>{product.category}</strong></p>
-                // </div>
+                <div key={product.id}
+                  className="bg-white border rounded-lg shadow-md p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
+
+                  <img width="50px"
+                    src={product.image}
+                    alt={`Imagen de ${product.title}`}
+                    className="w-20 h-20 object-contain mb-2" />
+                  <h2 key={product.id}
+                    className="text-lg font-semibold text-center truncate w-full">
+                    {product.title}</h2>
+                  <p className="text-orange-800 font-bold mt-1">${product.price}</p>
+                </div>
               ))
           }
         </div>
@@ -181,19 +191,27 @@ const Home = () => {
         <div className="grid grid-cols-4 gap-4">
           {
             products.map((product) =>
-              <div className="flex">
-                <div key={product.id}>
-                  <h2 key={product.id}>{product.title}</h2>
-                  <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-                  <p>${product.price}</p>
-                  <p>{product.description}</p>
-                  <p><strong>{product.category}</strong></p>
-                  {
-                    user && <div>
-                      <button onClick={() => handleOpenEdit(product)}>Editar</button>
-                      <button onClick={() => handleDelete(product.id)}>Borrar</button>
+              <div className="flex justify-center py-10 px-4 min-h-[80vh]">
+                <div className="w-full max-w-md rounded-xl shadow-md">
+                  <div key={product.id}>
+                    <div className="flex w-ful h-full max-w-md bg-amber-100 rounded-xl items-center justify-center">
+                      <img width="80px" src={product.image}
+                        alt={`Imagen de ${product.title}`} />
                     </div>
-                  }
+                    <div className="flex p-[1.5rem] flex-col">
+                      <h2 className="font-bold text-amber-800 p-4"
+                        key={product.id}>{product.title}</h2>
+                      <p>${product.price}</p>
+                      <p>{product.description}</p>
+                      <p><strong>{product.category}</strong></p>
+                    </div>
+                    {
+                      user && <div>
+                        <button onClick={() => handleOpenEdit(product)}>Editar</button>
+                        <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                      </div>
+                    }
+                  </div>
                 </div>
               </div>
             )
