@@ -62,6 +62,9 @@ const Login = () => {
         setSuccess("")
         navigate("/")
       }, 1500)
+
+      login(user)
+
     } else {
       setUsername("")
       setPassword("")

@@ -99,7 +99,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="/nosotros"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3"
+                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full"
                     onClick={() => setMenuOpen(false)}> Nosotros
                   </Link>
                 </li>
