@@ -90,13 +90,13 @@ const Home = () => {
   return (
     <Layout>
       <section>
-        <h1 className="text-center text-3xl mt-8 text-amber-800 font-bold">Bienvenido a Nuestra Tienda</h1>
+        <h1 className="text-center text-4xl mt-8 text-amber-800 font-bold">Bienvenido a Nuestra Tienda</h1>
         <p
-          className="text-center text-orange-500/50">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
+          className="text-center text-orange-500/50 mt-2">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section>
-        <h2 className="text-center text-3xl mt-8 font-semibold text-amber-800" >¿Por qué elegirnos?</h2>
+        <h2 className="text-center text-4xl mt-8 font-semibold text-amber-800" >¿Por qué elegirnos?</h2>
         <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5  sm:grid-cols-1">
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
@@ -120,7 +120,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h2 className="text-center text-2xl font-bold">Nuestros productos</h2>
+        <h2 className="text-center text-3xl text-amber-800 font-bold mt-5 mb-5">Nuestros productos</h2>
         <div className="flex flex-col items-center">
           <p className="text-center text-2xl mb-4">
             Elegí entre nuestras categorías más populares.
