@@ -126,22 +126,23 @@ const Home = () => {
           />
         </div>
         {/* div para filtrar busqueda por palabra del usuario */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 m-2">
           {
             //validacion para que no me muestre nada
             searchWord.trim() === ""
-              ? null                                                   //uso includes para hacer la busqueda parcial
+              ? null
+              //uso includes para hacer la busqueda parcial
               : products.filter((producto) => producto.title.toLowerCase().includes(searchWord.toLowerCase())).map(product => (
                 //muestro en la UI
                 <div key={product.id}
-                  className="bg-white border rounded-lg shadow-md p-4 flex flex-col items-center hover:shadow-lg transition-shadow">
+                  className="bg-white border rounded-lg p-4 flex flex-col items-center">
 
-                  <img width="50px"
+                  <img
                     src={product.image}
                     alt={`Imagen de ${product.title}`}
-                    className="w-20 h-20 object-contain mb-2" />
+                    className="w-15 h-15 object-contain mb-2" />
                   <h2 key={product.id}
-                    className="text-lg font-semibold text-center truncate w-full">
+                    className="text-md font-semibold text-center truncate w-full">
                     {product.title}</h2>
                   <p className="text-orange-800 font-bold mt-1">${product.price}</p>
                 </div>
@@ -188,22 +189,26 @@ const Home = () => {
           </section>
         }
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-2">
           {
             products.map((product) =>
               <div className="flex justify-center py-10 px-4 min-h-[80vh]">
                 <div className="w-full max-w-md rounded-xl shadow-md border border-yellow-900">
                   <div key={product.id}>
                     <div className="flex w-ful h-full max-w-md bg-amber-100 rounded-xl items-center justify-center">
-                      <img width="80px" src={product.image}
-                        alt={`Imagen de ${product.title}`} />
+                      <img
+                        src={product.image}
+                        alt={`Imagen de ${product.title}`}
+                        className="w-40 h-40 object-contain" />
                     </div>
-                    <div className="flex p-[1.5rem] flex-col">
-                      <h2 className="font-bold text-amber-800 p-4"
+                    <div className="flex p-[1.5rem] flex-col space-y-3">
+                      <h2
+                        className="font-bold text-amber-800"
                         key={product.id}>{product.title}</h2>
-                      <p>${product.price}</p>
-                      <p>{product.description}</p>
-                      <p><strong>{product.category}</strong></p>
+                      <p className="font-bold text-2xl text-green-700">${product.price}</p>
+                      <p className="truncate text-gray-900/50">{product.description}</p>
+                      <p className="text-amber-500"><strong>{product.category}</strong></p>
+
                     </div>
                     {
                       user && <div>
