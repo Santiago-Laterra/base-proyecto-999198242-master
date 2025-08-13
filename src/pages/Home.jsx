@@ -90,30 +90,36 @@ const Home = () => {
   return (
     <Layout>
       <section>
-        <h1>Bienvenido a Nuestra Tienda</h1>
+        <h1 className="text-center text-3xl mt-8">Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section>
-        <h2>¿Por qué elegirnos?</h2>
-        <ul>
-          <li>
-            <h3>Envíos a todo el país</h3>
-            <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
-          </li>
-          <li>
-            <h3>Pagos seguros</h3>
-            <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
-          </li>
-          <li>
-            <h3>Atención personalizada</h3>
-            <p>Estamos disponibles para ayudarte en todo momento.</p>
-          </li>
+        <h2 className="text-center text-3xl mt-8">¿Por qué elegirnos?</h2>
+        <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5">
+          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+            <li className="flex flex-col justify-center items-center">
+              <h3>Envíos a todo el país</h3>
+              <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+            </li>
+          </div>
+          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+            <li className="flex flex-col justify-center items-center">
+              <h3>Pagos seguros</h3>
+              <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
+            </li>
+          </div>
+          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+            <li className="flex flex-col justify-center items-center">
+              <h3>Atención personalizada</h3>
+              <p>Estamos disponibles para ayudarte en todo momento.</p>
+            </li>
+          </div>
         </ul>
       </section>
 
       <section>
-        <h2>Nuestros productos</h2>
+        <h2 className="text-center text-2xl font-bold">Nuestros productos</h2>
         <div className="flex flex-col items-center">
           <p className="text-center text-2xl mb-4">
             Elegí entre nuestras categorías más populares.
