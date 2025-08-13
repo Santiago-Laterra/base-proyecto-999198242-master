@@ -96,7 +96,7 @@ const Home = () => {
 
       <section>
         <h2 className="text-center text-3xl mt-8">¿Por qué elegirnos?</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5">
+        <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5  sm:grid-cols-1">
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
               <h3>Envíos a todo el país</h3>
