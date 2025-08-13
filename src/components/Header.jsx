@@ -74,12 +74,12 @@ const Header = () => {
               <>
                 <li>
                   <Link to="/"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full" onClick={() => setMenuOpen(false)}>Inicio
+                    className="font-bold text-red-50 hover:bg-orange-400/25 py-2 px-3 rounded-full" onClick={() => setMenuOpen(false)}>Inicio
                   </Link>
                 </li>
                 <li>
                   <Link to="/dashboard"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full"
+                    className="font-bold text-red-50 hover:bg-orange-400/25 py-2 px-3 rounded-full"
                     onClick={() => setMenuOpen(false)}>Dashboard
                   </Link>
                 </li>
@@ -93,19 +93,19 @@ const Header = () => {
               <>
                 <li>
                   <Link to="/"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full"
+                    className="font-bold text-red-50 hover:bg-orange-400/25 py-2 px-3 rounded-full"
                     onClick={() => setMenuOpen(false)}> Inicio
                   </Link>
                 </li>
                 <li>
                   <Link to="/nosotros"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full"
+                    className="font-bold text-red-50 hover:bg-orange-400/25 py-2 px-3 rounded-full"
                     onClick={() => setMenuOpen(false)}> Nosotros
                   </Link>
                 </li>
                 <li>
                   <Link to="/login"
-                    className="font-bold hover:bg-orange-400/25 py-2 px-3 rounded-full"
+                    className="font-bold text-red-50 hover:bg-orange-400/25 py-2 px-3 rounded-full"
                     onClick={() => setMenuOpen(false)}> Login
                   </Link>
                 </li>
