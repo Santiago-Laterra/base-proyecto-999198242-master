@@ -176,45 +176,53 @@ const Home = () => {
 
         {
           showPopup && <section id="edicion"
-            className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24">
+            className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24 ">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">
               Editando el producto.
             </h2>
             <button onClick={() => setShowPopup(null)}
-              className="block mb-1 text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50 font-semibold">
+              className="block mb-1 text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50 font-semibold mb-5">
               Cerrar
             </button>
-            <form onSubmit={handleUpdate} className="space-y-5">
+            <form onSubmit={handleUpdate} className="space-y-8">
               <input
                 type="text"
                 placeholder="Ingrese el titulo"
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)}
+                className="w-full px-4 py-2 border rounded-lg"
               />
               <input
                 type="number"
                 placeholder="Ingrese el precio"
                 value={priceEdit}
                 onChange={(e) => setPriceEdit(e.target.value)}
+                className="w-full px-4 py-2 border rounded-lg"
               />
               <textarea
                 placeholder="Ingrese la descripción"
                 value={descriptionEdit}
                 onChange={(e) => setDescriptionEdit(e.target.value)}
+                className="w-full px-4 py-2 border rounded-lg"
+                rows="4"
               ></textarea>
               <input
                 type="text"
                 placeholder="Ingrese la categoria"
                 value={categoryEdit}
                 onChange={(e) => setCategoryEdit(e.target.value)}
+                className="w-full px-4 py-2 border rounded-lg"
               />
               <input
                 type="text"
                 placeholder="Ingrese la URL de la imagen"
                 value={imageEdit}
                 onChange={(e) => setImageEdit(e.target.value)}
+                className="w-full px-4 py-2 border rounded-lg"
               />
-              <button>Guardar Cambios</button>
+              <button className="w-full py-2 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition">
+                Guardar Cambios
+              </button>
             </form>
           </section>
         }
