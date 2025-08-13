@@ -192,7 +192,7 @@ const Home = () => {
           {
             products.map((product) =>
               <div className="flex justify-center py-10 px-4 min-h-[80vh]">
-                <div className="w-full max-w-md rounded-xl shadow-md">
+                <div className="w-full max-w-md rounded-xl shadow-md border border-yellow-900">
                   <div key={product.id}>
                     <div className="flex w-ful h-full max-w-md bg-amber-100 rounded-xl items-center justify-center">
                       <img width="80px" src={product.image}
