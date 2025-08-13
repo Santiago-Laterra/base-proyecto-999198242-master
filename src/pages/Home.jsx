@@ -158,7 +158,8 @@ const Home = () => {
         </div>
 
         {
-          showPopup && <section className="popup-edit">
+          showPopup && <section id="edicion"
+            className="popup-edit scroll-mt-24">
             <h2>Editando el producto.</h2>
             <button onClick={() => setShowPopup(null)}>Cerrar</button>
             <form onSubmit={handleUpdate}>
@@ -220,8 +221,9 @@ const Home = () => {
                     {
                       user && <div className="flex justify-evenly">
                         <button
+
                           className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-red-50 px-2 py-1 rounded-lg"
-                          onClick={() => handleOpenEdit(product)}>Editar</button>
+                          onClick={() => handleOpenEdit(product)}><a href="#edicion">Editar</a></button>
                         <button
                           className="text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50"
                           onClick={() => handleDelete(product.id)}>Borrar</button>
