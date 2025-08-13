@@ -176,7 +176,7 @@ const Home = () => {
 
         {
           showPopup && <section id="edicion"
-            className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24 ">
+            className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24 flex flex-col items-center">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">
               Editando el producto.
             </h2>
@@ -190,7 +190,7 @@ const Home = () => {
                 placeholder="Ingrese el titulo"
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)}
-                className="w-full px-4 py-2 border rounded-lg"
+                className="w-80 px-4 py-2 border rounded-lg"
               />
               <input
                 type="number"
