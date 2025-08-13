@@ -90,12 +90,13 @@ const Home = () => {
   return (
     <Layout>
       <section>
-        <h1 className="text-center text-3xl mt-8">Bienvenido a Nuestra Tienda</h1>
-        <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
+        <h1 className="text-center text-3xl mt-8 text-amber-800 font-bold">Bienvenido a Nuestra Tienda</h1>
+        <p
+          className="text-center text-orange-500/50">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section>
-        <h2 className="text-center text-3xl mt-8">¿Por qué elegirnos?</h2>
+        <h2 className="text-center text-3xl mt-8 font-semibold text-amber-800" >¿Por qué elegirnos?</h2>
         <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5  sm:grid-cols-1">
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
@@ -217,9 +218,13 @@ const Home = () => {
 
                     </div>
                     {
-                      user && <div>
-                        <button onClick={() => handleOpenEdit(product)}>Editar</button>
-                        <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                      user && <div className="flex justify-evenly">
+                        <button
+                          className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-red-50 px-2 py-1 rounded-lg"
+                          onClick={() => handleOpenEdit(product)}>Editar</button>
+                        <button
+                          className="text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50"
+                          onClick={() => handleDelete(product.id)}>Borrar</button>
                       </div>
                     }
                   </div>
