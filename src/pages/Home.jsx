@@ -180,10 +180,12 @@ const Home = () => {
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">
               Editando el producto.
             </h2>
-            <button onClick={() => setShowPopup(null)}
-              className="block mb-1 text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50 font-semibold mb-5">
-              Cerrar
-            </button>
+            <div className="flex justify-start w-full">
+              <button onClick={() => setShowPopup(null)}
+                className="block mb-1 text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50 font-semibold mb-5">
+                Cerrar
+              </button>
+            </div>
             <form onSubmit={handleUpdate} className="space-y-8">
               <input
                 type="text"
@@ -220,7 +222,7 @@ const Home = () => {
                 onChange={(e) => setImageEdit(e.target.value)}
                 className="w-full px-4 py-2 border rounded-lg"
               />
-              <button className="w-full py-2 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition">
+              <button className="w-full py-2 text-stone-900 rounded-lg  text-green-600 border border-green-600 bg-green-400 hover:bg-green-600 hover:text-red-50 px-2 py-1 rounded-lg">
                 Guardar Cambios
               </button>
             </form>
