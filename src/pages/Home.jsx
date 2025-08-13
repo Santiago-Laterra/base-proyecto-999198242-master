@@ -92,7 +92,7 @@ const Home = () => {
       <section>
         <h1 className="text-center text-4xl mt-8 text-amber-800 font-bold">Bienvenido a Nuestra Tienda</h1>
         <p
-          className="text-center text-orange-500/50 mt-2">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.
+          className="text-center text-orange-600/60 mt-2">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.
         </p>
       </section>
 
@@ -100,8 +100,8 @@ const Home = () => {
         <h2 className="text-center text-4xl mt-8 font-semibold text-amber-800">
           ¿Por qué elegirnos?
         </h2>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 mt-5">
-          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 mt-8">
+          <div className="bg-amber-100 border rounded-lg p-4 flex flex-col items-center  text-center shadow-md hover:shadow-lg transition-shadow">
             <li className="flex flex-col justify-center items-center">
               <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
                 Envíos a todo el país
@@ -111,7 +111,7 @@ const Home = () => {
               </p>
             </li>
           </div>
-          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+          <div className="bg-amber-100 border rounded-lg p-4 flex flex-col items-center  text-center shadow-md hover:shadow-lg transition-shadow">
             <li className="flex flex-col justify-center items-center">
               <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
                 Pagos seguros
@@ -121,7 +121,7 @@ const Home = () => {
               </p>
             </li>
           </div>
-          <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
+          <div className="bg-amber-100 border rounded-lg p-4 flex flex-col items-center  text-center shadow-md hover:shadow-lg transition-shadow">
             <li className="flex flex-col justify-center items-center">
               <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
                 Atención personalizada
@@ -135,7 +135,7 @@ const Home = () => {
       </section>
 
       <section>
-        <h2 className="text-center text-3xl text-amber-800 font-bold mt-5 mb-5">
+        <h2 className="text-center text-3xl text-amber-800 font-bold mt-8 mb-5">
           Nuestros productos
         </h2>
         <div className="flex flex-col items-center">
@@ -238,7 +238,6 @@ const Home = () => {
                     {
                       user && <div className="flex justify-evenly">
                         <button
-
                           className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-red-50 px-2 py-1 rounded-lg"
                           onClick={() => handleOpenEdit(product)}><a href="#edicion">Editar</a></button>
                         <button
