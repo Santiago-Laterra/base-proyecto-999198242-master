@@ -176,7 +176,7 @@ const Home = () => {
 
         {
           showPopup && <section id="edicion"
-            className="max-w-2xl mx-auto mt-10 bg-amber-50 p-6 rounded-xl shadow-lg scroll-mt-24">
+            className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">Editando el producto.</h2>
             <button onClick={() => setShowPopup(null)}>Cerrar</button>
             <form onSubmit={handleUpdate} className="space-y-5">
