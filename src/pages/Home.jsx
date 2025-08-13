@@ -96,24 +96,30 @@ const Home = () => {
       </section>
 
       <section>
-        <h2 className="text-center text-4xl mt-8 font-semibold text-amber-800" >¿Por qué elegirnos?</h2>
-        <ul className="grid grid-cols-1 md:grid-cols-3 space-x-5 ml-5 mr-5 mt-5  sm:grid-cols-1">
+        <h2 className="text-center text-4xl mt-8 font-semibold text-amber-800">¿Por qué elegirnos?</h2>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 mt-5">
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
-              <h3>Envíos a todo el país</h3>
-              <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+              <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
+                Envíos a todo el país</h3>
+              <p className="text-gray-600" >
+                Recibí tu compra en la puerta de tu casa estés donde estés.</p>
             </li>
           </div>
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
-              <h3>Pagos seguros</h3>
-              <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
+              <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
+                Pagos seguros</h3>
+              <p className="text-gray-600">
+                Trabajamos con plataformas que garantizan tu seguridad.</p>
             </li>
           </div>
           <div className="bg-white border rounded-lg p-4 flex flex-col items-center">
             <li className="flex flex-col justify-center items-center">
-              <h3>Atención personalizada</h3>
-              <p>Estamos disponibles para ayudarte en todo momento.</p>
+              <h3 className="text-[20px] font-semibold text-amber-800 mb-2">
+                Atención personalizada</h3>
+              <p className="text-gray-600">
+                Estamos disponibles para ayudarte en todo momento.</p>
             </li>
           </div>
         </ul>
