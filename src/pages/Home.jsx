@@ -243,7 +243,7 @@ const Home = () => {
                     </div>
                     <div className="flex p-[1.5rem] flex-col space-y-3">
                       <h2
-                        className="font-bold text-amber-800"
+                        className="font-bold text-amber-800 min-h-[3.5rem] leading-snug line-clamp-2"
                         key={product.id}>{product.title}</h2>
                       <p className="font-bold text-2xl text-green-700">${product.price}</p>
                       <p className="truncate text-gray-900/50">{product.description}</p>
@@ -253,10 +253,10 @@ const Home = () => {
                     {
                       user && <div className="flex justify-evenly">
                         <button
-                          className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-red-50 px-2 py-1 rounded-lg"
+                          className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-red-50 px-2 py-1 rounded-lg mb-2"
                           onClick={() => handleOpenEdit(product)}><a href="#edicion">Editar</a></button>
                         <button
-                          className="text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50"
+                          className="text-red-500 border border-red-500 hover:bg-red-500 px-2 py-1 rounded-lg hover:text-red-50 mb-2"
                           onClick={() => handleDelete(product.id)}>Borrar</button>
                       </div>
                     }
