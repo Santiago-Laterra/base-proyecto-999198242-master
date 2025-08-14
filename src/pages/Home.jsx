@@ -92,7 +92,7 @@ const Home = () => {
       <section>
         <h1 className="text-center text-4xl mt-8 text-amber-800 font-bold">Bienvenido a Nuestra Tienda</h1>
         <p
-          className="text-center text-orange-600/60 mt-2">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.
+          className="text-center text-orange-600/60 mt-2">Productos seleccionados para vos. Calidad y confianza en cada compra.
         </p>
       </section>
 
@@ -107,7 +107,7 @@ const Home = () => {
                 Envíos a todo el país
               </h3>
               <p className="text-gray-600">
-                Recibí tu compra en la puerta de tu casa estés donde estés.
+                Recibí tu pedido donde estés.
               </p>
             </li>
           </div>
@@ -117,7 +117,7 @@ const Home = () => {
                 Pagos seguros
               </h3>
               <p className="text-gray-600">
-                Trabajamos con plataformas que garantizan tu seguridad.
+                Comprá con total tranquilidad.
               </p>
             </li>
           </div>
@@ -127,7 +127,7 @@ const Home = () => {
                 Atención personalizada
               </h3>
               <p className="text-gray-600">
-                Estamos disponibles para ayudarte en todo momento.
+                Siempre listos para ayudarte.
               </p>
             </li>
           </div>
