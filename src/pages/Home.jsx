@@ -178,7 +178,7 @@ const Home = () => {
           showPopup && <section id="edicion"
             className="max-w-2xl mx-auto mt-10 bg-amber-200 p-6 rounded-xl shadow-lg scroll-mt-24 flex flex-col items-center">
             <h2 className="text-2xl font-bold text-amber-800 mb-6 text-center">
-              Editando el producto.
+              Editando el producto!!
             </h2>
             <div className="flex justify-start w-full">
               <button onClick={() => setShowPopup(null)}
