@@ -104,7 +104,7 @@ const Dashboard = () => {
           <section>
             <form onSubmit={handleSubmit}
               className="space-y-4">
-              <h2 className="text-2xl">Cargar nuevo producto</h2>
+              <h2 className="text-2xl text-center font-bold text-amber-800">Cargar nuevo producto</h2>
               <div>
                 <label>Nombre del producto:</label>
                 <input type="text" name="nombre"
